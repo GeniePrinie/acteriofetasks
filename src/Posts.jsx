@@ -1,3 +1,9 @@
+import { PostsCard } from "./Components/PostsCard";
+
 export function Posts() {
-  return <div>A lot of Posts here</div>;
+  return (
+    <div className="container">
+      <PostsCard />
+    </div>
+  );
 }
