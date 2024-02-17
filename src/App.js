@@ -1,5 +1,7 @@
+import { RouterPathway } from "./RouterPathway";
+
 function App() {
-  return <div className="App">hello</div>;
+  return <RouterPathway />;
 }
 
 export default App;
