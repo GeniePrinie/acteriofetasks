@@ -1,5 +1,4 @@
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { RemovePost } from "./RemovePost";
 import { Reaction } from "./Reaction";
 
 export const PostCard = ({ post }) => {
@@ -9,16 +8,11 @@ export const PostCard = ({ post }) => {
         className="card bg-secondary border-0 my-5 py-2 px-3 mx-auto"
         style={{ maxWidth: "800px" }}
       >
-        <div
-          className="cursor pt-3 pe-4"
-          style={{ position: "absolute", top: "0", right: "0" }}
-        >
-          <FontAwesomeIcon icon={faEllipsis} />
-        </div>
+        <RemovePost id={post.id} />
 
         <div className="card-body">
           <div
-            className="user fs-4 py-2 border-black"
+            className="user fs-4 py-2 border-black text-dark"
             style={{ borderBottom: "1px solid" }}
           >
             User {post.userId}
