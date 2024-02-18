@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { getData } from "./Api/getData";
 import { PostsCard } from "./Components/PostsCard";
+import { BASE_ENDPOINT } from "./Utility/constants";
 
 export function PostsPage() {
-  const endpoint = "https://dummyjson.com/posts"; // TODO: Extract into const file
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const result = await getData(endpoint);
+        const result = await getData(`${BASE_ENDPOINT}`);
         setPosts(result.posts);
       } catch (error) {
-        console.error("error fetching data", error); // TODO: Make alert
+        alert("Error fetching data: " + error.message);
       }
     };
     fetchPosts();

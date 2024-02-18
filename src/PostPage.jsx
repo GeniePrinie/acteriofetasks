@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getData } from "./Api/getData";
 import { PostCard } from "./Components/PostCard";
+import { BASE_ENDPOINT } from "./Utility/constants";
 
 export function PostPage() {
   let { id } = useParams();
 
-  const endpoint = `https://dummyjson.com/posts/${id}`; // TODO: Extract into const file
   const [post, setPost] = useState({});
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const result = await getData(endpoint);
+        const result = await getData(`${BASE_ENDPOINT}/${id}`);
         setPost(result);
       } catch (error) {
-        console.error("error fetching data", error); // TODO: Make alert
+        alert("Error fetching data: " + error.message);
       }
     };
     fetchPost();
