@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { displayDateTime } from "../Utility/datetime";
 
-export const RemovePost = ({ id }) => {
+export const DeleteButton = ({ id }) => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
