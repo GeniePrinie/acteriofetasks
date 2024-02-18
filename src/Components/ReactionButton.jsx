@@ -5,7 +5,7 @@ import { putData } from "../Api/putData";
 import { useParams } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-export const Reaction = ({ post }) => {
+export const ReactionButton = ({ post }) => {
   let { id } = useParams();
   const [reactionCount, setReactionCount] = useState(post.reactions || 0);
   const [isActive, setIsActive] = useState(false);

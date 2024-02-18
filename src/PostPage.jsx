@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getData } from "./Api/getData";
-import { PostCard } from "./Components/PostCard";
+import { DetailedPostCard } from "./Components/DetailedPostCard";
 import { BASE_ENDPOINT } from "./Utility/constants";
 
 export function PostPage() {
@@ -23,7 +23,7 @@ export function PostPage() {
 
   return (
     <div className="container">
-      <PostCard post={post} />
+      <DetailedPostCard post={post} />
     </div>
   );
 }
