@@ -52,3 +52,7 @@ a:hover {
 .cursor {
   cursor: pointer;
 }
+
+.dropdown-toggle::after {
+  display: none !important;
+}

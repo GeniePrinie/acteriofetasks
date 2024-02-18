@@ -1,6 +1,6 @@
 import React from "react";
-import { Posts } from "./Posts";
-import { Post } from "./Post";
+import { PostsPage } from "./PostsPage";
+import { PostPage } from "./PostPage";
 import { Layout } from "./Layout/Layout";
 import {
   BrowserRouter as Router,
@@ -20,8 +20,8 @@ export function RouterPathway() {
         <Routes>
           <Route path="/" element={<Navigate to="/posts" />} />
           <Route path="/posts" element={<Layout />}>
-            <Route index element={<Posts />} />
-            <Route path="/posts/:id" element={<Post />} />
+            <Route index element={<PostsPage />} />
+            <Route path="/posts/:id" element={<PostPage />} />
           </Route>
           <Route path="*" element={<RouteNotFound />} />
         </Routes>
