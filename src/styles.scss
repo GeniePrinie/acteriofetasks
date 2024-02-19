@@ -14,6 +14,11 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 88vh;
 }
 
 a {
@@ -38,6 +43,14 @@ a:hover {
 
 .user {
   font-weight: 700;
+}
+
+.breadcrumbs {
+  color: $dark;
+}
+
+.breadcrumbs:hover {
+  color: $primary;
 }
 
 .card {
