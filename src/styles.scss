@@ -16,6 +16,10 @@ body {
   font-style: normal;
 }
 
+.container {
+  min-height: 85vh;
+}
+
 a {
   text-decoration: none;
   color: $black;
@@ -38,6 +42,14 @@ a:hover {
 
 .user {
   font-weight: 700;
+}
+
+.breadcrumbs {
+  color: $dark;
+}
+
+.breadcrumbs:hover {
+  color: $primary;
 }
 
 .card {
