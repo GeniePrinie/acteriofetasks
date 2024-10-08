@@ -13,7 +13,7 @@ export const SearchBar = ({ posts, onFilteredPosts }) => {
             post.title.toLowerCase().includes(search.toLowerCase())
           );
     onFilteredPosts(filteredPosts);
-  }, []);
+  }, [onFilteredPosts, posts, search]);
 
   return (
     <div
