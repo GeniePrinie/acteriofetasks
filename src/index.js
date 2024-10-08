@@ -4,8 +4,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import $ from "jquery";
-import Popper from "popper.js";
 import "./styles.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
