@@ -7,12 +7,16 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const ReactionButton = ({ post }) => {
   let { id } = useParams();
-  const [reactionCount, setReactionCount] = useState(post.reactions || 0);
+  const [reactionCount, setReactionCount] = useState(
+    post?.reactions?.likes || 0
+  );
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setReactionCount(post.reactions || 0);
-  }, [post.reactions]);
+    if (post?.reactions?.likes) {
+      setReactionCount(post.reactions.likes);
+    }
+  }, [post?.reactions?.likes]);
 
   const handleReactionClick = async () => {
     try {
